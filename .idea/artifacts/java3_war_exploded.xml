@@ -1,0 +1,129 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="java3:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/java3_war_exploded</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="java3" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Maven: org.postgresql:postgresql:42.2.24" />
+          <element id="library" level="project" name="Maven: org.checkerframework:checker-qual:3.5.0" />
+          <element id="library" level="project" name="Maven: org.hibernate:hibernate-core:5.6.0.Final" />
+          <element id="library" level="project" name="Maven: org.jboss.logging:jboss-logging:3.4.2.Final" />
+          <element id="library" level="project" name="Maven: javax.persistence:javax.persistence-api:2.2" />
+          <element id="library" level="project" name="Maven: net.bytebuddy:byte-buddy:1.11.20" />
+          <element id="library" level="project" name="Maven: antlr:antlr:2.7.7" />
+          <element id="library" level="project" name="Maven: org.jboss.spec.javax.transaction:jboss-transaction-api_1.2_spec:1.1.1.Final" />
+          <element id="library" level="project" name="Maven: org.jboss:jandex:2.2.3.Final" />
+          <element id="library" level="project" name="Maven: com.fasterxml:classmate:1.5.1" />
+          <element id="library" level="project" name="Maven: javax.activation:javax.activation-api:1.2.0" />
+          <element id="library" level="project" name="Maven: org.hibernate.common:hibernate-commons-annotations:5.1.2.Final" />
+          <element id="library" level="project" name="Maven: javax.xml.bind:jaxb-api:2.3.1" />
+          <element id="library" level="project" name="Maven: org.glassfish.jaxb:jaxb-runtime:2.3.1" />
+          <element id="library" level="project" name="Maven: org.glassfish.jaxb:txw2:2.3.1" />
+          <element id="library" level="project" name="Maven: com.sun.istack:istack-commons-runtime:3.0.7" />
+          <element id="library" level="project" name="Maven: org.jvnet.staxex:stax-ex:1.8" />
+          <element id="library" level="project" name="Maven: com.sun.xml.fastinfoset:FastInfoset:1.2.15" />
+          <element id="library" level="project" name="Maven: org.hibernate:hibernate-entitymanager:5.6.0.Final" />
+          <element id="library" level="project" name="Maven: net.sf.jasperreports:jasperreports:6.18.1" />
+          <element id="library" level="project" name="Maven: commons-beanutils:commons-beanutils:1.9.4" />
+          <element id="library" level="project" name="Maven: commons-collections:commons-collections:3.2.2" />
+          <element id="library" level="project" name="Maven: commons-digester:commons-digester:2.1" />
+          <element id="library" level="project" name="Maven: commons-logging:commons-logging:1.1.1" />
+          <element id="library" level="project" name="Maven: org.apache.commons:commons-collections4:4.2" />
+          <element id="library" level="project" name="Maven: com.lowagie:itext:2.1.7.js9" />
+          <element id="library" level="project" name="Maven: org.bouncycastle:bcprov-jdk15on:1.68" />
+          <element id="library" level="project" name="Maven: org.jfree:jcommon:1.0.23" />
+          <element id="library" level="project" name="Maven: org.jfree:jfreechart:1.0.19" />
+          <element id="library" level="project" name="Maven: org.eclipse.jdt:ecj:3.21.0" />
+          <element id="library" level="project" name="Maven: org.codehaus.castor:castor-xml:1.4.1" />
+          <element id="library" level="project" name="Maven: org.codehaus.castor:castor-core:1.4.1" />
+          <element id="library" level="project" name="Maven: org.apache.commons:commons-lang3:3.4" />
+          <element id="library" level="project" name="Maven: javax.inject:javax.inject:1" />
+          <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-core:2.12.2" />
+          <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-databind:2.12.2" />
+          <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.12.2" />
+          <element id="library" level="project" name="Maven: jstl:jstl:1.2" />
+        </element>
+        <element id="directory" name="view">
+          <element id="file-copy" path="$PROJECT_DIR$/webapps/WEB-INF/view/index.jsp" />
+          <element id="file-copy" path="$PROJECT_DIR$/webapps/WEB-INF/view/login.jsp" />
+          <element id="file-copy" path="$PROJECT_DIR$/webapps/WEB-INF/view/userindex.jsp" />
+          <element id="file-copy" path="$PROJECT_DIR$/webapps/WEB-INF/view/sellerindex.jsp" />
+          <element id="file-copy" path="$PROJECT_DIR$/webapps/WEB-INF/view/analythindex.jsp" />
+          <element id="file-copy" path="$PROJECT_DIR$/webapps/WEB-INF/view/call_managerindex.jsp" />
+          <element id="file-copy" path="$PROJECT_DIR$/webapps/WEB-INF/view/registration.jsp" />
+          <element id="file-copy" path="$PROJECT_DIR$/webapps/WEB-INF/view/loginExistPage.jsp" />
+        </element>
+      </element>
+      <element id="javaee-facet-resources" facet="java3/web/Web" />
+      <element id="javaee-facet-resources" facet="java3/javaeeApplication/javaEEApplication" />
+      <element id="directory" name="ShowroomPages">
+        <element id="file-copy" path="$PROJECT_DIR$/webapps/ShowroomPages/list-showroom.jsp" />
+        <element id="file-copy" path="$PROJECT_DIR$/webapps/ShowroomPages/showroom-form.jsp" />
+      </element>
+      <element id="directory" name="CarPages">
+        <element id="file-copy" path="$PROJECT_DIR$/webapps/CarPages/list-car.jsp" />
+        <element id="file-copy" path="$PROJECT_DIR$/webapps/CarPages/car-form.jsp" />
+      </element>
+      <element id="directory" name="OtherJSP">
+        <element id="file-copy" path="$PROJECT_DIR$/webapps/OtherJSP/Error.jsp" />
+        <element id="file-copy" path="$PROJECT_DIR$/webapps/OtherJSP/reports.jsp" />
+      </element>
+      <element id="directory" name="SellerPages">
+        <element id="file-copy" path="$PROJECT_DIR$/webapps/SellerPages/list-seller.jsp" />
+        <element id="file-copy" path="$PROJECT_DIR$/webapps/SellerPages/seller-form.jsp" />
+      </element>
+      <element id="directory" name="CustomerPages">
+        <element id="file-copy" path="$PROJECT_DIR$/webapps/CustomerPages/customer-form.jsp" />
+        <element id="file-copy" path="$PROJECT_DIR$/webapps/CustomerPages/list-customer.jsp" />
+      </element>
+      <element id="directory" name="DeliveryPages">
+        <element id="file-copy" path="$PROJECT_DIR$/webapps/DeliveryPages/list-delivery.jsp" />
+        <element id="file-copy" path="$PROJECT_DIR$/webapps/DeliveryPages/delivery-form.jsp" />
+      </element>
+      <element id="directory" name="OrderPages">
+        <element id="file-copy" path="$PROJECT_DIR$/webapps/OrderPages/list-order.jsp" />
+        <element id="file-copy" path="$PROJECT_DIR$/webapps/OrderPages/order-form.jsp" />
+      </element>
+      <element id="directory" name="ReqOrderPages">
+        <element id="file-copy" path="$PROJECT_DIR$/webapps/ReqOrderPages/list-reqOrder.jsp" />
+        <element id="file-copy" path="$PROJECT_DIR$/webapps/ReqOrderPages/reqOrder-form.jsp" />
+      </element>
+      <element id="directory" name="ReqToCallManagerPages">
+        <element id="file-copy" path="$PROJECT_DIR$/webapps/ReqToCallManagerPages/reqToCallManager-form.jsp" />
+        <element id="file-copy" path="$PROJECT_DIR$/webapps/ReqToCallManagerPages/list-reqToCallManager.jsp" />
+      </element>
+      <element id="directory" name="UsersPages">
+        <element id="file-copy" path="$PROJECT_DIR$/webapps/UsersPages/users-form.jsp" />
+        <element id="file-copy" path="$PROJECT_DIR$/webapps/UsersPages/list-users.jsp" />
+      </element>
+      <element id="directory" name="RolesPages">
+        <element id="file-copy" path="$PROJECT_DIR$/webapps/RolesPages/roles-form.jsp" />
+        <element id="file-copy" path="$PROJECT_DIR$/webapps/RolesPages/list-roles.jsp" />
+      </element>
+      <element id="file-copy" path="$PROJECT_DIR$/webapps/Simple_Blue.jrxml" />
+      <element id="file-copy" path="$PROJECT_DIR$/webapps/seller_stat.jrxml" />
+      <element id="file-copy" path="$PROJECT_DIR$/webapps/orderSimpleReport.jrxml" />
+      <element id="file-copy" path="$PROJECT_DIR$/webapps/order_cars_stat.jrxml" />
+      <element id="directory" name="UsersPageActions">
+        <element id="file-copy" path="$PROJECT_DIR$/webapps/UsersPageActions/change-info-page.jsp" />
+        <element id="file-copy" path="$PROJECT_DIR$/webapps/UsersPageActions/cars-to-order.jsp" />
+        <element id="file-copy" path="$PROJECT_DIR$/webapps/UsersPageActions/message-page.jsp" />
+        <element id="file-copy" path="$PROJECT_DIR$/webapps/UsersPageActions/orders-for-users.jsp" />
+        <element id="file-copy" path="$PROJECT_DIR$/webapps/UsersPageActions/showroom-for-users.jsp" />
+        <element id="file-copy" path="$PROJECT_DIR$/webapps/UsersPageActions/seller-for-user.jsp" />
+      </element>
+      <element id="directory" name="SellerPageAction">
+        <element id="file-copy" path="$PROJECT_DIR$/webapps/SellerPageAction/message-to-call.jsp" />
+      </element>
+      <element id="directory" name="ArchiveOrderPages">
+        <element id="file-copy" path="$PROJECT_DIR$/webapps/ArchiveOrderPages/list-archiveOrder.jsp" />
+      </element>
+      <element id="directory" name="ArchiveSellerPages">
+        <element id="file-copy" path="$PROJECT_DIR$/webapps/ArchiveSellerPages/list-archiveSeller.jsp" />
+      </element>
+    </root>
+  </artifact>
+</component>

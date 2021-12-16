@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.18.1.final using JasperReports Library version 6.18.1-9d75d1969e774d4f179fb3be8401e98a0e6d1611  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="selSub" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="67ef8e34-6c31-49a7-8a0a-903973225565">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="New Data Adapter "/>
+	<parameter name="ID" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[new Integer(1)]]></defaultValueExpression>
+	</parameter>
+	<queryString language="hql">
+		<![CDATA[SELECT new map (s.name,
+	s.phone,
+	s.position,
+	sr.showroomId)
+FROM SellerEntity s JOIN s.showrooms sr
+where sr.showroomId = $P{HIBERNATE_SESSION}]]>
+	</queryString>
+	<field name="name" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="name"/>
+		<property name="com.jaspersoft.studio.field.label" value="name"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="seller"/>
+	</field>
+	<field name="position" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="position"/>
+		<property name="com.jaspersoft.studio.field.label" value="position"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="seller"/>
+	</field>
+	<field name="phone" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="phone"/>
+		<property name="com.jaspersoft.studio.field.label" value="phone"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="seller"/>
+	</field>
+	<field name="showroom_id" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="showroom_id"/>
+		<property name="com.jaspersoft.studio.field.label" value="showroom_id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="seller"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<columnHeader>
+		<band height="25" splitType="Stretch">
+			<staticText>
+				<reportElement mode="Opaque" x="-20" y="0" width="190" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="297f647d-2650-4b7a-8b81-3f169ec989cf">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="6faf258f-1f7a-4068-b9ea-c3838cc1d30c"/>
+				</reportElement>
+				<textElement textAlignment="Left">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="180" y="0" width="120" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="73fc7448-7aa1-429a-a328-e898302d0c58">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="6faf258f-1f7a-4068-b9ea-c3838cc1d30c"/>
+				</reportElement>
+				<textElement textAlignment="Left">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[position]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="310" y="0" width="130" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="f40a1bb2-0619-45d6-9708-d38c412be7ab">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="6faf258f-1f7a-4068-b9ea-c3838cc1d30c"/>
+				</reportElement>
+				<textElement textAlignment="Left">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[phone]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement x="-21" y="0" width="191" height="20" uuid="541b42bb-fff8-47a7-a849-498fcf872697">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="11bf1225-45cc-442a-9a03-79c2d1d1f5b7"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="180" y="0" width="120" height="20" uuid="2de52684-cb72-4088-b4b5-459ec5d4f22b">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="de3c222e-f21b-4716-9e4e-9140ff88d558"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{position}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="310" y="0" width="130" height="20" uuid="7403f73c-0254-4f1f-811c-2fd941ccc603">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="235b912a-f10b-40f5-bef2-9fb2aae23f1f"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{phone}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<summary>
+		<band height="20">
+			<textField>
+				<reportElement x="40" y="0" width="260" height="20" uuid="2a587ce7-e55b-4d43-b29d-7b10234c7c9e"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Total count of sellers in showroom"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="310" y="0" width="130" height="20" uuid="7b04352e-c480-471f-bebe-4d9ff21cf4fc"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{PAGE_COUNT}]]></textFieldExpression>
+			</textField>
+		</band>
+	</summary>
+</jasperReport>

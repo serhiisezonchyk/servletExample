@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.18.1.final using JasperReports Library version 6.18.1-9d75d1969e774d4f179fb3be8401e98a0e6d1611  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="order_cars_stat" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="5ce5926a-07c5-40e2-af0b-a60b2ed60a43">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="New Data Adapter "/>
+	<queryString language="hql">
+		<![CDATA[SELECT new map(ca.name,
+	sum(x.price) as price_sum,
+	sum(x.quantity) as quantity_sum)
+FROM OrderEntity x INNER JOIN x.cars ca
+GROUP BY ca.name]]>
+	</queryString>
+	<field name="name" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="name"/>
+		<property name="com.jaspersoft.studio.field.label" value="name"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="car"/>
+	</field>
+	<field name="quantity_sum" class="java.lang.Long">
+		<property name="com.jaspersoft.studio.field.name" value="quantity_sum"/>
+		<property name="com.jaspersoft.studio.field.label" value="quantity_sum"/>
+	</field>
+	<field name="price_sum" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.name" value="price_sum"/>
+		<property name="com.jaspersoft.studio.field.label" value="price_sum"/>
+	</field>
+	<background>
+		<band/>
+	</background>
+	<title>
+		<band height="72">
+			<frame>
+				<reportElement mode="Opaque" x="-20" y="-20" width="595" height="92" backcolor="#006699" uuid="18e0ed0f-caad-472b-b9ad-9fec112ca6a8"/>
+				<staticText>
+					<reportElement x="20" y="20" width="234" height="43" forecolor="#FFFFFF" uuid="2d3952bc-392b-4d0e-85af-3349c836d717"/>
+					<textElement>
+						<font size="34" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Ordered cars]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="395" y="43" width="180" height="20" forecolor="#FFFFFF" uuid="95733f6c-f5c9-4d5f-a29a-7ebb31e5d2c8"/>
+					<textElement textAlignment="Right">
+						<font size="14" isBold="false"/>
+					</textElement>
+					<text><![CDATA[Statistic of ordered cars]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="13"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="21">
+			<line>
+				<reportElement x="-20" y="20" width="595" height="1" forecolor="#666666" uuid="5b6ad2a3-fa16-41de-be99-eaf69c1b3aaf"/>
+			</line>
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="0" width="185" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="a657c925-a8d1-4673-b8da-b332f3cd794e">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="b10ac4b8-0475-485e-b8b2-883749db50a9"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="185" y="0" width="185" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="af74d6f8-2a85-4c99-8547-a443ef476bec">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="5949ff99-54ee-45ae-9a08-bf4a8c964bb4"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[quantity_sum]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="370" y="0" width="185" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="9c7e2758-9543-4557-9655-fdb732aa8908">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="62c93743-b227-4a14-b588-751b4dac2d7b"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[price_sum]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="19" width="555" height="1" uuid="9f926cbf-1a6c-4d1c-9309-e3c651aaab8b"/>
+			</line>
+			<textField textAdjust="StretchHeight">
+				<reportElement x="0" y="0" width="185" height="20" uuid="2e101e3b-f39c-4f32-9ef2-362fb62a7e5f">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="b10ac4b8-0475-485e-b8b2-883749db50a9"/>
+				</reportElement>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{name}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight">
+				<reportElement x="185" y="0" width="185" height="20" uuid="2473d7cd-f360-4f3b-8d34-3d73a8e71ac5">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="5949ff99-54ee-45ae-9a08-bf4a8c964bb4"/>
+				</reportElement>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{quantity_sum}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight">
+				<reportElement x="370" y="0" width="185" height="20" uuid="30b6dbf7-b83f-4742-87a6-96c7b53151f0">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="62c93743-b227-4a14-b588-751b4dac2d7b"/>
+				</reportElement>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{price_sum}  + " €"]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band/>
+	</columnFooter>
+	<pageFooter>
+		<band height="17">
+			<textField>
+				<reportElement mode="Opaque" x="0" y="4" width="515" height="13" backcolor="#E6E6E6" uuid="8ec0aeb0-779d-49ea-a15b-2bc88fbcfe6a"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement mode="Opaque" x="515" y="4" width="40" height="13" backcolor="#E6E6E6" uuid="7aa4dae8-b824-4207-9292-633c1ed9f4a2"/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="0" y="4" width="100" height="13" uuid="5a9bd017-0390-45d2-bd9e-0c744086f297"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="287">
+			<pie3DChart>
+				<chart evaluationTime="Report">
+					<reportElement x="0" y="30" width="280" height="230" uuid="9270629f-fe1d-487e-99d8-1769b226253a"/>
+					<chartTitle/>
+					<chartSubtitle/>
+					<chartLegend/>
+				</chart>
+				<pieDataset>
+					<dataset resetType="Report"/>
+					<keyExpression><![CDATA[$F{name}]]></keyExpression>
+					<valueExpression><![CDATA[$F{quantity_sum}]]></valueExpression>
+					<labelExpression><![CDATA[$F{name}]]></labelExpression>
+				</pieDataset>
+				<pie3DPlot>
+					<plot/>
+					<itemLabel/>
+				</pie3DPlot>
+			</pie3DChart>
+			<pieChart>
+				<chart evaluationTime="Report">
+					<reportElement x="280" y="30" width="264" height="230" uuid="6cc8dcf5-8451-4a5c-862e-7f27d72391b0"/>
+					<chartTitle/>
+					<chartSubtitle/>
+					<chartLegend/>
+				</chart>
+				<pieDataset>
+					<dataset resetType="Report"/>
+					<keyExpression><![CDATA[$F{name}]]></keyExpression>
+					<valueExpression><![CDATA[$F{price_sum}]]></valueExpression>
+					<labelExpression><![CDATA[$F{name}]]></labelExpression>
+				</pieDataset>
+				<piePlot>
+					<plot/>
+					<itemLabel/>
+				</piePlot>
+			</pieChart>
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="10" width="280" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="f151943e-4455-48b2-8685-5b5a10fde57f">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="b10ac4b8-0475-485e-b8b2-883749db50a9"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[quantity of selled models stat]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="280" y="10" width="275" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="6160ce72-ec61-431d-a568-4560f5503169">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="b10ac4b8-0475-485e-b8b2-883749db50a9"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[total price of selled models stat]]></text>
+			</staticText>
+		</band>
+	</summary>
+</jasperReport>

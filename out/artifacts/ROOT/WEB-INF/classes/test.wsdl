@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://www.minfin.fgov.be/bbf/extern/myMinfin/"
+                  xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<wsdl:types>
+        <xsd:element name="Add">
+            <xsd:complexType>
+                <xsd:sequence>
+                    <xsd:element name="x" type="xsd:int"/>
+                    <xsd:element name = "y" type="xsd:int"/>
+                </xsd:sequence>
+            </xsd:complexType>
+        </xsd:element>
+    <xsd:element name="AddResponse">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="addResult" type="xsd:int"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+    </wsdl:types>
+
+    <wsdl:message name="AddIn">
+        <xsd:part name="parameters" element="Add"/>
+    </wsdl:message>
+    <wsdl:message name="AddOut">
+        <xsd:part name="paramrters" element="AddResponse"/>
+    </wsdl:message>
+
+    <wsdl:portType name="AddPortType">
+        <wsdl:operation name="Add">
+            <wsdl:input message="AddIn"/>
+            <wsdl:output message="AddOut"/>
+        </wsdl:operation>
+    </wsdl:portType>
+
+    <wsdl:binding name="AddSoapBinding" type="AddPortType">
+        <wsdlsoap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+        <wsdl:operation name="Add">
+        <wsdlsoap:operation soapAction="http://127.0.0.1/Calculator/Add"></wsdlsoap:operation>
+                <wsdl:input>
+                    <wsdlsoap:body use="literal"></wsdlsoap:body>
+                </wsdl:input>
+            <wsdl:output>
+                <wsdlsoap:body use="literal"></wsdlsoap:body>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+
+    <wsdl:service name="CalculatorWebService">
+        <wsdl:documentation>
+            Web service of summ two nums
+        </wsdl:documentation>
+        <wsdl:port name="AddWebServiceSoap" binding="AddSoapBinding">
+            <wsdlsoap:address location="http://localhost:1109/Calculator/Add.asmx"></wsdlsoap:address>
+        </wsdl:port>
+    </wsdl:service>
+</wsdl:definitions>
